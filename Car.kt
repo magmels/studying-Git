@@ -1,12 +1,15 @@
-class Car(var brand : String = "", var year : Int = 0) {
-
+class Car(private var brand_: String = "", private var year_: Int = 0) {
+    val brand = brand
+    val year = year_
     constructor(string: String) : this() {
         val car = string.split(' ')
-        brand = car[0]
-        year = car[1].toInt()
+        brand_ = car[0]
+        year_ = car[1].toInt()
     }
 
     fun printDetails() {
-        println("Brand: $brand, Year: $year")
+        println("Brand: $brand_, Year: $year_")
     }
+
+
 }

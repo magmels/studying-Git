@@ -17,14 +17,14 @@ fun main() {
     logs.forEach { Logger.log(it) }
 
     val n = readln().toInt()
-    val triangles = List<Triangle>(n) {Triangle()}
+    val triangles = List<Triangle>(n) {Triangle()} */
 
     for(i in 0..<n) {
         val input = readln().split(" ")
         triangles[i].set(input[0].toDouble(),
             input[1].toDouble(), input[2].toDouble())
     }
-    triangles.forEach { println(it.isEquilateral())} */
+    triangles.forEach { println(it.isEquilateral())}
 
     var n = readln().toInt()
     val cars = mutableListOf<Car>()
